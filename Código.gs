@@ -27,7 +27,7 @@ function breakApart() {
 */
 function breakApartAux(sheet, rangeToSplit) {
   
-  // Currente spreadsheet & sheet
+  // Current spreadsheet & sheet
   let ss = SpreadsheetApp.getActiveSpreadsheet();
   let activeSSId = ss.getId();
   let activeSId = sheet.getSheetId();
