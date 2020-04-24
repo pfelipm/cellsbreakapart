@@ -23,7 +23,7 @@ function breakApart() {
 /** 
 * Breaks apart merged cells in range
 * @param {sheet} sheet Sheet of range
-* @param {range} Range Cell or cells that intersect with whole merged range
+* @param {range} rangeToSplit Cell or cells that intersect with whole merged range
 */
 function breakApartAux(sheet, rangeToSplit) {
   
