@@ -23,7 +23,7 @@ function breakApart() {
 /** 
 * Breaks apart merged cells in range
 * @param {sheet} sheet Sheet of range
-* @param {range} Range Cell or cells that interect with whole merged range
+* @param {range} Range Cell or cells that intersect with whole merged range
 */
 function breakApartAux(sheet, rangeToSplit) {
   
@@ -39,9 +39,9 @@ function breakApartAux(sheet, rangeToSplit) {
    
   // Cells to merge R/C
   let rowS = rangeToSplit.getRow();
-  let rowE = rowS + rangeToSplit.getNumRows();
+  let rowE = rowS + rangeToSplit.getNumRows() - 1;
   let colS = rangeToSplit.getColumn();
-  let colE = colS + rangeToSplit.getNumColumns();
+  let colE = colS + rangeToSplit.getNumColumns() - 1;
   
   // Find overlapping merged range
   // Advanced service ranges start in 0 and are right-open [..)
@@ -63,10 +63,10 @@ function breakApartAux(sheet, rangeToSplit) {
   // Overlapping range?
   if (merge != undefined) {
   // Break apart whole range
-    ss.getActiveSheet().getRange(merge.startRowIndex + 1,
-                                 merge.startColumnIndex + 1,
-                                 merge.endRowIndex - merge.startRowIndex,
-                                 merge.endColumnIndex - merge.startColumnIndex).breakApart();
+  ss.getActiveSheet().getRange(merge.startRowIndex + 1,
+                               merge.startColumnIndex + 1,
+                               merge.endRowIndex - merge.startRowIndex,
+                               merge.endColumnIndex - merge.startColumnIndex).breakApart();
   } else SpreadsheetApp.getUi().alert('No merged cells found in specified range.');
  
 } 
