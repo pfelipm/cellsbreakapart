@@ -44,7 +44,7 @@ function breakApartAux(sheet, rangeToSplit) {
   let colE = colS + rangeToSplit.getNumColumns() - 1;
   
   // Find overlapping merged range
-  // Advanced service ranges start in 0 and are right-open [..)
+  // Advanced service merged ranges start in 0 and are right-open [..)
   let merge = merges.find(m => {
                           let mRowS = m.startRowIndex + 1;
                           let mRowE = m.endRowIndex;
