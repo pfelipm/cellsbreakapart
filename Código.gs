@@ -16,6 +16,7 @@ function onOpen() {
 function breakApart() {
   
   let ss = SpreadsheetApp.getActiveSpreadsheet();
+  // Range to unmerge in B1
   breakApartAux(ss.getActiveSheet(), ss.getActiveSheet().getRange(ss.getRange('B1').getValue()));
   
 }
