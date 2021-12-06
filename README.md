@@ -1,4 +1,4 @@
-![Creado con - Google Apps Script](https://img.shields.io/static/v1?label=Creado+con&message=Google+Apps+Script&color=blue&style=for-the-badge&logo=GAS)
+![Created with - Google Apps Script](https://img.shields.io/static/v1?label=Created+with&message=Google+Apps+Script&color=blue)
 # CellsBreakApart
 
 Sample GAS code to break apart a combined range of cells in a Google Spreadsheet. Finds the corresponding overlapping merged range of cells, if exists, to avoid runtime errors when the merged range is not exactly coincident with the provided one.
